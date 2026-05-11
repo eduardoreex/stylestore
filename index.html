@@ -3,296 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="StyleStore - Elegância e Sofisticação em Moda Masculina. Encontre as melhores coleções de camisas, ternos e calçados.">
-    <meta name="author" content="StyleStore">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://stylestore.com.br/">
-    <meta property="og:title" content="StyleStore | Elegância & Sofisticação">
-    <meta property="og:description" content="A moda masculina elevada ao próximo nível. Qualidade premium e design moderno.">
-    <meta property="og:image" content="assets/og-image.jpg">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-
+    <meta name="description" content="StyleStore - Moda Masculina de Elite. Elegância, Sofisticação e Qualidade Premium.">
     <title>StyleStore | Moda Masculina de Elite</title>
-
-    <!-- Google Fonts -->
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome (para ícones) -->
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     
-    <!-- TOPBAR -->
-    <section class="topbar">
-        <div class="container flex-between">
-            <div class="topbar-socials">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-            <div class="topbar-account">
-                <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
-            </div>
-        </div>
-    </section>
+    <div id="header-root"></div>
 
-    <!-- HEADER -->
-    <header class="main-header">
-        <div class="container flex-between">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="index.html">SS<span>.</span></a>
-            </div>
-
-            <!-- Navegação -->
-            <nav class="navbar" aria-label="Navegação Principal">
-                <ul class="nav-links">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Camisetas</a></li>
-                    <li><a href="#">Calças</a></li>
-                    <li><a href="#">Ternos</a></li>
-                </ul>
-            </nav>
-
-            <!-- Ações -->
-            <div class="header-actions">
-                <div class="search-box">
-                    <input type="text" placeholder="Buscar produtos..." aria-label="Buscar produtos">
-                    <button aria-label="Executar busca"><i class="fas fa-search"></i></button>
-                </div>
-                <div class="cart-icon">
-                    <a href="javascript:void(0)" id="open-cart" aria-label="Ver carrinho de compras">
-                        <i class="fas fa-shopping-bag"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- HERO BANNER -->
-        <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h5>Nova Coleção 2026</h5>
-                    <h1>Elegância & <br><span>Sofisticação</span></h1>
-                    <p>Descubra a essência do luxo moderno com peças exclusivas <br>desenhadas para quem não aceita o comum.</p>
-                    <div class="hero-btns">
-                        <a href="#catalogo" class="btn-primary">Ver Coleção</a>
-                        <a href="#" class="btn-outline">Saber Mais</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CATEGORIAS EM DESTAQUE -->
-        <section class="categories section-padding">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Categorias em <span>Destaque</span></h2>
-                    <div class="line"></div>
-                </div>
-                <div class="category-grid">
-                    <!-- Camisas -->
-                    <a href="#" class="category-card">
-                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=800');"></div>
-                        <div class="category-info">
-                            <h3>Camisas</h3>
-                            <span>Explorar</span>
-                        </div>
-                    </a>
-                    <!-- Calçados -->
-                    <a href="#" class="category-card">
-                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=800');"></div>
-                        <div class="category-info">
-                            <h3>Calçados</h3>
-                            <span>Explorar</span>
-                        </div>
-                    </a>
-                    <!-- Calças -->
-                    <a href="#" class="category-card">
-                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&q=80&w=800');"></div>
-                        <div class="category-info">
-                            <h3>Calças</h3>
-                            <span>Explorar</span>
-                        </div>
-                    </a>
-                    <!-- Ternos -->
-                    <a href="#" class="category-card">
-                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1594932224456-749718364b4b?auto=format&fit=crop&q=80&w=800');"></div>
-                        <div class="category-info">
-                            <h3>Ternos</h3>
-                            <span>Explorar</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CATÁLOGO DE PRODUTOS -->
-        <section id="catalogo" class="catalog section-padding">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Nosso <span>Catálogo</span></h2>
-                    <div class="line"></div>
-                </div>
-
-                <div class="catalog-container">
-                    <!-- Filtros Laterais -->
-                    <aside class="filters">
-                        <div class="filter-group">
-                            <h4>Categorias</h4>
-                            <ul>
-                                <li><label><input type="checkbox"> Camisas</label></li>
-                                <li><label><input type="checkbox"> Calças</label></li>
-                                <li><label><input type="checkbox"> Ternos</label></li>
-                                <li><label><input type="checkbox"> Calçados</label></li>
-                            </ul>
-                        </div>
-
-                        <div class="filter-group">
-                            <h4>Filtrar por Preço</h4>
-                            <input type="range" min="0" max="2000" value="1000" class="range-slider">
-                            <div class="price-labels">
-                                <span>R$ 0</span>
-                                <span>R$ 2000</span>
-                            </div>
-                        </div>
-
-                        <div class="filter-group">
-                            <h4>Cores</h4>
-                            <div class="color-options">
-                                <span class="color-dot" style="background-color: #000;"></span>
-                                <span class="color-dot" style="background-color: #fff; border: 1px solid #ddd;"></span>
-                                <span class="color-dot" style="background-color: #E8440A;"></span>
-                                <span class="color-dot" style="background-color: #5d4037;"></span>
-                            </div>
-                        </div>
-
-                        <div class="filter-group">
-                            <h4>Tamanho</h4>
-                            <div class="size-options">
-                                <button class="size-btn">P</button>
-                                <button class="size-btn active">M</button>
-                                <button class="size-btn">G</button>
-                                <button class="size-btn">GG</button>
-                            </div>
-                        </div>
-                    </aside>
-
-                    <!-- Grid de Produtos -->
-                    <div class="product-grid">
-                        <!-- Gerado via JavaScript -->
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main id="app">
+        <!-- O conteúdo será injetado aqui pelo Router -->
     </main>
 
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Não fique de fora<span>!</span></h2>
-                <p>Assine nossa newsletter e receba ofertas exclusivas e as últimas tendências da moda masculina.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Seu melhor e-mail" required>
-                    <button type="submit" class="btn-primary">Inscrever-se</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <div id="footer-root"></div>
 
-    <!-- FOOTER -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <div class="logo">
-                        <a href="#">SS<span>.</span></a>
-                    </div>
-                    <p>StyleStore é a referência em moda masculina premium. Elevando sua autoestima através da elegância e sofisticação desde 2026.</p>
-                    <div class="footer-socials">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Menu</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Camisetas</a></li>
-                        <li><a href="#">Calças</a></li>
-                        <li><a href="#">Ternos</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Dúvidas</h4>
-                    <ul>
-                        <li><a href="#">Envios</a></li>
-                        <li><a href="#">Trocas e Devoluções</a></li>
-                        <li><a href="#">Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-contact">
-                    <h4>Contato</h4>
-                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
-                    <p><i class="fas fa-envelope"></i> contato@stylestore.com</p>
-                    <div class="security-badges">
-                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
-                        <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard">
-                        <img src="https://img.icons8.com/color/48/000000/google-pay.png" alt="Google Pay">
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 StyleStore - Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
-                <div class="secure-site">
-                    <span><i class="fas fa-shield-alt"></i> Compra 100% Segura</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- CARRINHO LATERAL -->
-    <div class="cart-overlay" id="cart-overlay"></div>
-    <aside class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <h3>Seu Carrinho</h3>
-            <button id="close-cart"><i class="fas fa-times"></i></button>
-        </div>
-        
-        <div class="cart-body" id="cart-items-container">
-            <!-- Itens do carrinho serão inseridos aqui -->
-            <div class="empty-cart-msg">Seu carrinho está vazio.</div>
-        </div>
-
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cart-total-value">R$ 0,00</span>
-            </div>
-            <button class="btn-checkout">Finalizar Compra</button>
-            <button class="btn-continue-shopping" id="continue-shopping">Continuar Comprando</button>
-        </div>
-    </aside>
-
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <!-- Scripts (Type Module é essencial para a arquitetura modular) -->
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
