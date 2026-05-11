@@ -51,7 +51,7 @@
             </div>
 
             <!-- Navegação -->
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Navegação Principal">
                 <ul class="nav-links">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Camisetas</a></li>
@@ -63,11 +63,11 @@
             <!-- Ações -->
             <div class="header-actions">
                 <div class="search-box">
-                    <input type="text" placeholder="Buscar produtos...">
-                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+                    <button aria-label="Executar busca"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="cart-icon">
-                    <a href="javascript:void(0)" id="open-cart">
+                    <a href="javascript:void(0)" id="open-cart" aria-label="Ver carrinho de compras">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-count">0</span>
                     </a>
@@ -75,6 +75,68 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <!-- HERO BANNER -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h5>Nova Coleção 2026</h5>
+                    <h1>Elegância & <br><span>Sofisticação</span></h1>
+                    <p>Descubra a essência do luxo moderno com peças exclusivas <br>desenhadas para quem não aceita o comum.</p>
+                    <div class="hero-btns">
+                        <a href="#catalogo" class="btn-primary">Ver Coleção</a>
+                        <a href="#" class="btn-outline">Saber Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIAS EM DESTAQUE -->
+        <section class="categories section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Categorias em <span>Destaque</span></h2>
+                    <div class="line"></div>
+                </div>
+                <div class="category-grid">
+                    <!-- Camisas -->
+                    <a href="#" class="category-card">
+                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="category-info">
+                            <h3>Camisas</h3>
+                            <span>Explorar</span>
+                        </div>
+                    </a>
+                    <!-- Calçados -->
+                    <a href="#" class="category-card">
+                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="category-info">
+                            <h3>Calçados</h3>
+                            <span>Explorar</span>
+                        </div>
+                    </a>
+                    <!-- Calças -->
+                    <a href="#" class="category-card">
+                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="category-info">
+                            <h3>Calças</h3>
+                            <span>Explorar</span>
+                        </div>
+                    </a>
+                    <!-- Ternos -->
+                    <a href="#" class="category-card">
+                        <div class="category-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1594932224456-749718364b4b?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="category-info">
+                            <h3>Ternos</h3>
+                            <span>Explorar</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
