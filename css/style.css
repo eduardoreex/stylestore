@@ -236,7 +236,217 @@ img {
     opacity: 0.9;
 }
 
-/* ANIMATIONS */
+/* CATALOG & FILTERS */
+.catalog-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+}
+
+.filters {
+    background-color: var(--bg-medium);
+    padding: 30px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group h4 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: var(--text-white);
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.filter-group ul li {
+    margin-bottom: 10px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.filter-group input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.range-slider {
+    width: 100%;
+    accent-color: var(--primary-color);
+}
+
+.price-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-top: 5px;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.color-dot:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.size-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.size-btn {
+    border: 1px solid #333;
+    color: var(--text-white);
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.size-btn.active, .size-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--bg-medium);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(232, 68, 10, 0.15);
+}
+
+.product-thumb {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-thumb img {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    transition: var(--transition);
+    z-index: 3;
+}
+
+.product-card:hover .add-to-cart-btn {
+    bottom: 0;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-cat {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin: 5px 0 10px;
+    font-family: var(--font-body);
+}
+
+.product-rating {
+    color: #f1c40f;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.current-price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* RESPONSIVE CATALOG */
+@media (max-width: 1200px) {
+    .catalog-container { grid-template-columns: 200px 1fr; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .catalog-container { grid-template-columns: 1fr; }
+    .filters { display: none; } /* Poderia ser um dropdown no futuro */
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+    .product-grid { grid-template-columns: 1fr; }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
