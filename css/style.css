@@ -60,6 +60,144 @@ img {
     padding: 0 20px;
 }
 
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TOPBAR */
+.topbar {
+    background-color: #000000;
+    padding: 8px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.topbar-socials a {
+    color: var(--text-gray);
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+.topbar-socials a:hover {
+    color: var(--primary-color);
+}
+
+.topbar-account a {
+    color: var(--text-white);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.topbar-account i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+/* HEADER */
+.main-header {
+    background-color: var(--bg-medium);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.main-header.scroll-active {
+    padding: 12px 0;
+    background-color: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.logo a {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--text-white);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--text-gray);
+    text-transform: uppercase;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    margin-right: 25px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+    width: 150px;
+    font-size: 0.9rem;
+}
+
+.search-box button {
+    color: var(--text-gray);
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon i {
+    font-size: 1.4rem;
+    color: var(--text-white);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
