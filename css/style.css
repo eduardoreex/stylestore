@@ -1,0 +1,95 @@
+/* DESIGN SYSTEM & VARIABLES */
+:root {
+    --primary-color: #E8440A; /* Laranja Vibrante */
+    --secondary-color: #C0392B; /* Vermelho Escuro */
+    --bg-dark: #0a0a0a;
+    --bg-medium: #111111;
+    --text-white: #FFFFFF;
+    --text-gray: #AAAAAA;
+    
+    --font-title: 'Bebas Neue', cursive;
+    --font-body: 'Inter', sans-serif;
+    
+    --transition: 0.3s ease;
+    --container-width: 1200px;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* UTILS */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #ff551a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(232, 68, 10, 0.3);
+}
+
+/* SCROLLBAR CUSTOM */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-medium);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
