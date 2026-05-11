@@ -197,6 +197,29 @@
         </section>
     </main>
 
+    <!-- CARRINHO LATERAL -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="cart-body" id="cart-items-container">
+            <!-- Itens do carrinho serão inseridos aqui -->
+            <div class="empty-cart-msg">Seu carrinho está vazio.</div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+            <button class="btn-continue-shopping" id="continue-shopping">Continuar Comprando</button>
+        </div>
+    </aside>
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
