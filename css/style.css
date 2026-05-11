@@ -645,9 +645,49 @@ img {
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color);
+/* MICRO-INTERAÇÕES & POLIMENTO */
+.btn-primary, .btn-checkout, .add-to-cart-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+
+.btn-primary::before, .btn-checkout::before, .add-to-cart-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn-primary:hover::before, .btn-checkout:hover::before, .add-to-cart-btn:hover::before {
+    left: 100%;
+}
+
+.cart-icon:hover i {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.cart-count {
+    transition: var(--transition);
+}
+
+.cart-count.bump {
+    transform: scale(1.4);
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* CART SIDEBAR */
 .cart-overlay {
@@ -806,3 +846,162 @@ img {
     letter-spacing: 1px;
     background: none;
 }
+
+/* NEWSLETTER */
+.newsletter {
+    background-color: var(--bg-medium);
+    padding: 80px 0;
+    border-top: 1px solid #222;
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-content h2 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-content h2 span {
+    color: var(--primary-color);
+}
+
+.newsletter-content p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background: #000;
+    border: 1px solid #333;
+    padding: 15px;
+    color: white;
+    border-radius: 4px;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #000;
+    padding: 80px 0 30px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-about .logo {
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: #111;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-socials a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.footer-links h4, .footer-contact h4 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--text-white);
+    letter-spacing: 1px;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.footer-links ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.footer-contact i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.security-badges {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.security-badges img {
+    height: 30px;
+    filter: grayscale(1) opacity(0.7);
+    transition: var(--transition);
+}
+
+.security-badges img:hover {
+    filter: none;
+    opacity: 1;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1a1a1a;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+.secure-site {
+    color: #27ae60;
+    font-weight: 700;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 992px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    .newsletter-form { flex-direction: column; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+}
+
